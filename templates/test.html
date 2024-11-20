@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
+
+</head>
+<body>
+    <header class="titulo">
+        <h1>TEST DE PROGRAMACIÓN</h1>
+        <p>Selecciona la respuesta correcta para cada pregunta</p>
+    </header>
+    <div class="container">
+        <section id="p0">
+            <h3>¿Cuál de las siguientes afirmaciones sobre las listas en Python es correcta?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="respuesta(0,this)">Las listas en Python son inmutables.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p0" onclick="respuesta(0,this)">Las listas pueden contener diferentes tipos de datos.()
+            </label>
+            <label>
+                <input type="radio" value="3" name="p0" onclick="respuesta(0,this)">Las listas en Python solo pueden contener números.
+            </label>
+        </section>
+        <section id="p1">
+            <h3>¿Cuál es el propósito de la palabra clave "with" en Python?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="respuesta(1,this)">Para crear un nuevo hilo de ejecución.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p1" onclick="respuesta(1,this)">Para definir una función dentro de otra función.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p1" onclick="respuesta(1,this)">Para abrir un archivo y asegurarse de que se cierre automáticamente.()
+            </label>
+        </section>
+        <section id="p2">
+            <h3>¿Cuál es la función del módulo "itertools" en Python?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="respuesta(2,this)">Proporcionar herramientas para crear iteradores eficientes.()
+            </label>
+            <label>
+                <input type="radio" value="2" name="p2" onclick="respuesta(2,this)">Proporcionar funciones para manipular cadenas de texto.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p2" onclick="respuesta(2,this)">Proporcionar funciones para la gestión de bases de datos.
+            </label>
+        </section>
+        <section id="p3">
+            <h3>¿Qué es un generador en Python?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="respuesta(3,this)">Una función que devuelve un objeto iterable en lugar de una lista completa.()
+            </label>
+            <label>
+                <input type="radio" value="2" name="p3" onclick="respuesta(3,this)">Una función que solo se puede usar dentro de una clase.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p3" onclick="respuesta(3,this)">Un tipo de función que puede tener múltiples valores de retorno.
+            </label>
+        </section>
+        <section id="p4">
+            <h3>¿Cuál de las siguientes afirmaciones sobre punteros en C es correcta?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="respuesta(4,this)">Los punteros son utilizados solo para manipular cadenas de caracteres.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p4" onclick="respuesta(4,this)">Los punteros pueden almacenar datos de diferentes tipos sin necesidad de una conversión explícita.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p4" onclick="respuesta(4,this)">Un puntero debe ser inicializado antes de su uso para evitar un comportamiento indefinido.()
+            </label>
+        </section>
+        <section id="p5">
+            <h3>¿Qué hace la función "malloc" en C?</h3>
+            <label>
+                <input type="radio" value="1" name="p5" onclick="respuesta(5,this)">Reserva espacio en la memoria para un array de enteros.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p5" onclick="respuesta(5,this)">Libera la memoria previamente reservada.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p5" onclick="respuesta(5,this)">Asigna un bloque de memoria dinámica de un tamaño específico.()
+        </section>
+        <section id="p6">
+            <h3>¿Cuál es el propósito de la palabra clave static en la declaración de variables en C?</h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="respuesta(6,this)">Mantiene el valor de la variable entre las invocaciones de una función()
+            </label>
+            <label>
+                <input type="radio" value="2" name="p6" onclick="respuesta(6,this)">Indica que la variable es accesible solo dentro del archivo en el que se declara.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p6" onclick="respuesta(6,this)">Prohíbe la modificación de la variable después de su inicialización.
+            </label>
+        </section>
+        <section id="p7">
+            <h3>¿Cuál de las siguientes afirmaciones sobre la programación orientada a objetos en C++ es correcta?</h3>
+            <label>
+                <input type="radio" value="1" name="p7" onclick="respuesta(7,this)">C++ no admite la herencia múltiple.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p7" onclick="respuesta(7,this)">En C++, una clase puede tener varios constructores.()
+            </label>
+            <label>
+                <input type="radio" value="3" name="p7" onclick="respuesta(7,this)">La encapsulación se logra utilizando solo variables globales.
+            </label>
+        </section>
+        <section id="p8">
+            <h3>¿Qué es un puntero nulo en C++?</h3>
+            <label>
+                <input type="radio" value="1" name="p8" onclick="respuesta(8,this)">Un puntero que no apunta a ningún objeto o dirección válida en memoria.()
+            </label>
+            <label>
+                <input type="radio" value="2" name="p8" onclick="respuesta(8,this)">Un puntero que se inicializa automáticamente al valor cero.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p8" onclick="respuesta(8,this)">Un puntero que apunta a la primera dirección de memoria de un programa.
+            </label>
+        </section>
+        <section id="p9">
+            <h3>¿Cuál es el propósito de la palabra clave virtual en C++?</h3>
+            <label>
+                <input type="radio" value="1" name="p9" onclick="respuesta(9,this)">Permitir que una función tenga múltiples implementaciones en el mismo archivo.
+            </label>
+            <label>
+                <input type="radio" value="2" name="p9" onclick="respuesta(9,this)">Declarar que una clase no puede ser instanciada.
+            </label>
+            <label>
+                <input type="radio" value="3" name="p9" onclick="respuesta(9,this)">Habilitar el enlace dinámico y permitir la sobreescritura de funciones en clases derivadas.()
+            </label>
+        </section>
+        <a href="{{ url_for('puntuacion') }}" class="linkeo">
+            <button onclick="corregir()" class="btn botono">Terminar</button>
+        </a>
+    </div>
+</body>
+</html>

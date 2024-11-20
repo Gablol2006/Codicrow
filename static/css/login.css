@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff;
+    height: 100vh;
+}
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #025b97;
+    border-radius: 10px;
+}
+
+.formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1.5px solid #fff;
+}
+
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .username{
+    position: relative;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+
+.username input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+}
+
+.username label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #fff;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.username input:focus ~ label,
+.username input:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+    color: #000;
+}
+
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: #000;
+    cursor: pointer;
+}
+
+.recordar:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #00234b;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    border-color: #000;
+    transition: .5s;
+}
+
+.registrarse{
+margin: 30px 0;
+text-align: center;
+font-size: 16px;
+color: #000;
+}
+
+.registrarse a{
+    color: #00234b;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    border: 1px solid black;
+    padding: 8px 22px;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .navbar .navbar-brand {
+        text-align: center;
+    }
+    .navbar-nav {
+        flex-direction: row;  
+    }
+    .nav-link {
+        padding: 5px;  
+    }
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.navbar .navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+.navbar-toggler {
+    z-index: 1050;
+}

@@ -1,0 +1,122 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    border: 1px solid black;
+    padding: 8px 22px;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.navbar .navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+    margin-bottom: 10px;
+}
+
+.navbar-toggler {
+    z-index: 1050;
+}
+
+@media (max-width: 767.98px) {
+    .navbar .navbar-brand {
+        text-align: center;
+    }
+    .navbar-nav {
+        flex-direction: row;  
+    }
+    .nav-link {
+        padding: 5px;  
+    }
+}
+
+.logos {
+    margin-right: 10vh;
+    height: auto;  
+    max-width: 150px;  
+}
+
+@media (max-width: 767.98px) {
+    .logos {
+        margin-right: 5vh; 
+        max-width: 100px;   
+    }
+}
+
+.botonNavbar {
+    width: 18vh;
+    height: 6.5vh;
+    border: 3px solid #004d8b;
+    border-radius: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    background: white;
+    font-size: 0.9em;
+    font-weight: 510;
+    padding: 8px 22px;
+}
+
+.botonNavbar:hover {
+    background: #5b94b1;
+    color: white;
+    font-size: 1em;
+}
+
+.logos{
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+  
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.problem-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+  
+.problem-list a:hover {
+    text-decoration: underline;
+}
+  
+#code-editor {
+    font-family: monospace;
+}
+  
+.output-area {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px;
+    font-family: monospace;
+    color: #333;
+    white-space: pre-wrap;
+}
+  
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+  
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+  

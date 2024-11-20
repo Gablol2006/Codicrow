@@ -1,0 +1,118 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    border: 1px solid black;
+    padding: 8px 22px;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.btn-empieza {
+    padding: auto;
+    background-color: #02376b;
+    color: white;
+    height: 7vh;
+    width: 25vh;
+    border-radius: 0;
+}
+
+.btn-sesion {
+    background-color: #ffffff;
+    color: white;
+    height: 7vh;
+    width: 25vh;
+    border-radius: 0;
+    color: #000;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.navbar .navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+    margin-bottom: 10px;
+}
+
+.navbar-toggler {
+    z-index: 1050;
+}
+
+@media (max-width: 767.98px) {
+    .navbar .navbar-brand {
+        text-align: center;
+    }
+    .navbar-nav {
+        flex-direction: row;  
+    }
+    .nav-link {
+        padding: 5px;  
+    }
+}
+ 
+.footer {
+    margin-top: 5px;
+    background-color: #00234b;
+    padding: 8.5vh 0;
+    position: relative;  
+    width: 100%;
+    bottom: 0;
+}
+
+ 
+.logos {
+    margin-right: 10vh;
+    height: auto;  
+    max-width: 150px;  
+}
+
+@media (max-width: 767.98px) {
+    .logos {
+        margin-right: 5vh; 
+        max-width: 100px;   
+    }
+}
+
+.botonNavbar {
+    width: 18vh;
+    height: 6.5vh;
+    border: 3px solid #004d8b;
+    border-radius: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    background: white;
+    font-size: 0.9em;
+    font-weight: 510;
+    padding: 8px 22px;
+}
+
+.botonNavbar:hover {
+    background: #5b94b1;
+    color: white;
+    font-size: 1em;
+}
+
+.logos{
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+}
+
+.hero {
+    margin-top: 18vh;
+    margin-bottom: 5vh;
+    background-color: #9dcae7;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 11vh; 
+}
+
+

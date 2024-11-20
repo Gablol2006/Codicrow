@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web IDE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ide.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img
+                id="Codicrow"
+                src="{{url_for('static',filename='images/Codicrow-logo.png')}}"
+                alt="MDB Logo"
+                draggable="false"
+                height="60"
+                />
+            </a>
+            <ul class="navbar-nav d-flex flex-row justify-content-center">
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('index') }}"><i class="fas fa-plus-circle pe-2"></i>Inicio</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('Categoria') }}"><i class="fas fa-bell pe-2"></i>Cursos</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('Alglory') }}"><i class="fas fa-heart pe-2"></i>Algory</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('cuenta') }}"><i class="fas fa-heart pe-2"></i>Cuenta</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title">IDE Web para Python</h1>
+            <div class="field">
+                <label class="label">Selecciona el lenguaje:</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="language">
+                            <option value="python">Python</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                        </select>
+                    </div>
+                </div>
+            </div>            
+            <div class="field">
+                <label class="label">Escribe tu código Python:</label>
+                <div class="control">
+                    <textarea id="code-editor" class="textarea" rows="10">print("Hola Mundo")</textarea>
+                </div>
+            </div>
+
+            <div class="control">
+                <button id="run-code" class="button is-primary">Ejecutar Código</button>
+            </div>
+
+            <h2 class="subtitle">Resultado:</h2>
+            <pre id="output"></pre>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

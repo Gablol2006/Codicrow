@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="icon" type="image/x-icon" href="img/C-logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img
+                id="Codicrow"
+                src="{{url_for('static',filename='images/Codicrow-logo.png')}}"
+                alt="MDB Logo"
+                draggable="false"
+                height="60"
+                />
+            </a>
+        </div>
+    </nav>
+    <div class="formulario">
+
+        <h1>Recuperación de contraseña</h1>
+
+        <form action="{{ url_for('modificarContraseña') }}" method="POST">
+            <div class="username">
+                <input type="text" name="mail"required>
+                <label>Correo electrónico</label>
+            </div>
+            <div class="username">
+                <input type="password" name="pin" required>
+                <label>Nueva contraseña</label>
+            </div>
+            <input type="submit" value="Restablecer">
+            <div class="registrarse">
+                ¿No tienes cuenta? <a href="{{ url_for('registro') }}">!Registrate!</a>
+            </div>
+        </form>
+    
+    </div>
+<body>

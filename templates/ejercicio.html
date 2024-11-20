@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de Programación</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ejercicio.css') }}">
+</head>
+<body>
+  <!-- Navbar -->
+   <header>
+    <nav class="navbar navbar-expand-lg sticky-top bg-light navbar-light">
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img
+                id="Codicrow"
+                src="{{url_for('static',filename='images/Codicrow-logo.png')}}"
+                alt="MDB Logo"
+                draggable="false"
+                height="60"
+                />
+            </a>
+            <ul class="navbar-nav d-flex flex-row justify-content-center">
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('index') }}"><i class="fas fa-plus-circle pe-2"></i>Inicio</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('Categoria') }}"><i class="fas fa-bell pe-2"></i>Cursos</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link botonNavbar" href="{{ url_for('Alglory') }}"><i class="fas fa-heart pe-2"></i>Algory</a>
+                </li>
+                <li class="nav-item mx-1">
+                  <a class="nav-link botonNavbar" href="{{ url_for('cuenta') }}"><i class="fas fa-user pe-2"></i>Cuenta</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+   </header>
+<!-- Navbar -->
+    
+
+  <main class="container my-4" style="margin-top: 5vh;">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="h5">Lista de Problemas</h2>
+          </div>
+          <ul class="list-group list-group-flush problem-list">
+            <li class="list-group-item"><a href="#" onclick="showProblem('problem1')">Problema 1: Suma de dos números</a></li>
+            <li class="list-group-item"><a href="#" onclick="showProblem('problem2')">Problema 2: Buscar en una matriz</a></li>
+            <li class="list-group-item"><a href="#" onclick="showProblem('problem3')">Problema 3: Ordenar palabras</a></li>
+            <li class="list-group-item"><a href="#" onclick="showProblem('problem4')">Problema 4: Anagramas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h2 id="problem-title" class="h5">Seleccione un problema</h2>
+            <p id="problem-description">Seleccione un problema de la lista para ver los detalles.</p>
+
+            <div class="control">
+                <div class="select">
+                    <select id="language">
+                        <option value="python">Python</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3 class="h6 mt-4">Editor de Código</h3> 
+            <div class="control">
+                <textarea id="code-editor" class="form-control" rows="8" placeholder="Escribe tu código aquí..."></textarea>
+            </div>
+
+            <div class="control">
+                <button id="run-code" class="button btn-success mt-3 w-100 is-primary">Ejecutar Código</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="h6">Resultado</h3>
+          </div>
+          <div class="card-body">
+            <pre id="output"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const problems = {
+      problem1: {
+        title: 'Problema 1: Suma de dos números',
+        description: 'Escribe una función que tome dos números y retorne su suma.'
+      },
+      problem2: {
+        title: 'Problema 2: Buscar en una matriz',
+        description: 'Dada una matriz y un objetivo, retorna el índice del objetivo o -1 si no se encuentra.'
+      },
+      problem3: {
+        title: 'Problema 3: Ordenar palabras',
+        description: 'Escribe una función que ordene una lista de palabras alfabéticamente.'
+      },
+      problem4: {
+        title: 'Problema 4: Anagramas',
+        description: 'Escribe una función que determine si dos palabras son anagramas.'
+      }
+    };
+
+    function showProblem(problemId) {
+      const problem = problems[problemId];
+      document.getElementById('problem-title').textContent = problem.title;
+      document.getElementById('problem-description').textContent = problem.description;
+      document.getElementById('code-editor').value = ''; // Limpiar el editor de código
+      document.getElementById('output').textContent = 'El resultado aparecerá aquí...'; // Limpiar el área de resultados
+    }
+
+    function runCode() {
+      const code = document.getElementById('code-editor').value;
+      let output;
+
+      try {
+        output = eval(code); // Ejecuta el código en el editor
+      } catch (error) {
+        output = "Error: " + error.message; // Muestra el error si el código falla
+      }
+
+      document.getElementById('output').textContent = output || 'Sin salida.'; // Muestra el resultado o indica que no hay salida
+    }
+  </script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

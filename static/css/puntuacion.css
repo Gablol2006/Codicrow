@@ -1,0 +1,97 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    border: 1px solid black;
+    padding: 8px 22px;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.navbar .navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+    margin-bottom: 10px;
+}
+
+.navbar-toggler {
+    z-index: 1050;
+}
+
+.titulo{
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+    background-color: #004080;
+    color: #fff;
+    width: 100%;
+}
+
+.puntaje{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #8cc2e5;
+    border-radius: 10px;
+    margin-top: 4%;
+    padding-left: 1%;
+}
+
+.res{
+    margin-left: 5vw;
+}
+
+.mensajote{
+    text-align: center;
+}
+
+.deRegreso{
+    text-decoration: none;
+}
+
+.btn{
+    background-color: #4A90E2;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.botono{
+    display: block;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,105 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+    border: 1px solid black;
+    padding: 8px 22px;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.navbar .navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+    margin-bottom: 10px;
+}
+
+.navbar-toggler {
+    z-index: 1050;
+}
+
+@media (max-width: 767.98px) {
+    .navbar .navbar-brand {
+        text-align: center;
+    }
+    .navbar-nav {
+        flex-direction: row;  
+    }
+    .nav-link {
+        padding: 5px;  
+    }
+}
+
+.botonNavbar {
+    width: 18vh;
+    height: 6.5vh;
+    border: 3px solid #004d8b;
+    border-radius: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    background: white;
+    font-size: 0.9em;
+    font-weight: 510;
+    padding: 8px 22px;
+}
+
+.botonNavbar:hover {
+    background: #5b94b1;
+    color: white;
+    font-size: 1em;
+}
+
+.contenido{
+    margin-top: 30vh;
+}
+
+.control-panel {
+    background: lightgray;
+    text-align: right;
+    padding: 4px;
+    font-family: sans-serif;
+}
+
+.languages {
+    background: white;
+    border: 1px solid gray;
+}
+
+#editor { height: 400px; }
+
+.button-container {
+    text-align: right;
+    padding: 4px;
+}
+
+.btn {
+    background: #57a958;
+    color: white;
+    padding: 8px;
+    border: 0;
+}
+
+.output {
+        padding: 4px;
+        border: 2px solid gray;
+        min-height: 100px;
+        width: 99%;
+        resize: none;
+
+}
+
+.logos{
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+}
